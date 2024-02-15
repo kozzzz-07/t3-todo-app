@@ -1,15 +1,16 @@
 version: "3.8"
 services:
-  dev-postgres:
+  db:
     image: postgres:14.4-alpine
     ports:
       - 5434:5432
     environment:
-      POSTGRES_USER: udemy
-      POSTGRES_PASSWORD: udemy
-      POSTGRES_DB: udemy
+      POSTGRES_USER: todoapp
+      POSTGRES_PASSWORD: todoapp
+      POSTGRES_DB: todoapp
     restart: always
+    # `npx prisma migrate dev` を実行するのにnetworksの指定が必要
     networks:
-      - lesson
+      - myapp
 networks:
-  lesson:
+  myapp:
