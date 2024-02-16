@@ -21,9 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className={`font-sans ${inter.variable}`}>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <main className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
+            {children}
+          </main>
+        </TRPCReactProvider>
       </body>
     </html>
   );
