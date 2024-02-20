@@ -1,9 +1,9 @@
 import { create } from "zustand";
-import { updateTaskInput } from "~/schema/todo";
+import { UpdateTaskInput } from "~/schema/todo";
 
 type State = {
-  editedTask: updateTaskInput;
-  updateEditedTask: (payload: updateTaskInput) => void;
+  editedTask: UpdateTaskInput;
+  updateEditedTask: (payload: UpdateTaskInput) => void;
   resetEditedTask: () => void;
 };
 

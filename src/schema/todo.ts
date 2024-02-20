@@ -13,7 +13,7 @@ export const updateTaskSchema = z.object({
   body: z.string().max(5),
 });
 
-export type updateTaskInput = z.TypeOf<typeof updateTaskSchema>;
+export type UpdateTaskInput = z.TypeOf<typeof updateTaskSchema>;
 
 export const getSingleTaskSchema = z.object({
   taskId: z.string().cuid(),
